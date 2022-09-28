@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="930.0" prefWidth="591.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiControllersMain.AddApptController">
+   <children>
+      <Text layoutX="150.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Appointment">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Text>
+      <Text layoutX="29.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment ID">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="108.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="51.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer ID">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="83.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="76.0" layoutY="431.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="66.0" layoutY="491.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Date">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="61.0" layoutY="551.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Time">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="64.0" layoutY="611.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Date">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="62.0" layoutY="671.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Time">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="46.0" layoutY="775.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="TxtType" layoutX="187.0" layoutY="222.0" onAction="#TxtTypeOnAction" />
+      <TextField fx:id="TxtTitle" layoutX="187.0" layoutY="292.0" onAction="#TxtTitleOnAction" />
+      <TextField fx:id="TxtLocation" layoutX="187.0" layoutY="412.0" onAction="#TxtLocationOnAction" />
+      <TextField fx:id="TxtStartTime" layoutX="187.0" layoutY="532.0" onAction="#TxtStartTimeOnAction" promptText="Format  00:00" />
+      <TextField fx:id="TxtEndTime" layoutX="187.0" layoutY="652.0" onAction="#TxtEndTimeOnAction" promptText="Format  00:00" />
+      <ComboBox fx:id="ComboContact" layoutX="186.0" layoutY="352.0" onAction="#ComboContactOnAction" prefWidth="150.0" promptText="Select a Contact" />
+      <DatePicker fx:id="DateStart" layoutX="174.0" layoutY="472.0" onAction="#DateStartOnAction" promptText="Select A Day" />
+      <DatePicker fx:id="ComboEndDate" layoutX="175.0" layoutY="592.0" onAction="#ComboEndDateOnAction" promptText="Select A Day" />
+      <TextArea fx:id="TxtBxDesc" layoutX="162.0" layoutY="768.0" prefHeight="134.0" prefWidth="200.0" promptText="Text Goes Here." />
+      <RadioButton fx:id="RadioAmStart" layoutX="365.0" layoutY="536.0" mnemonicParsing="false" onAction="#RadioAmStartOnAction" selected="true" text="AM">
+         <toggleGroup>
+            <ToggleGroup fx:id="StartTimeRadio" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="RadioPmStart" layoutX="446.0" layoutY="536.0" mnemonicParsing="false" onAction="#RadioPmStartOnAction" text="PM" toggleGroup="$StartTimeRadio" />
+      <RadioButton fx:id="RadioPmEnd" layoutX="446.0" layoutY="656.0" mnemonicParsing="false" onAction="#RadioPmEndOnAction" text="PM">
+         <toggleGroup>
+            <ToggleGroup fx:id="EndTimeRadio" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="RadioAmEnd" layoutX="365.0" layoutY="656.0" mnemonicParsing="false" onAction="#RadioAmEndOnAction" selected="true" text="AM" toggleGroup="$EndTimeRadio" />
+      <Text layoutX="110.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Label fx:id="LabelApptID" layoutX="205.0" layoutY="101.0" text="Auto Generated">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="ButtonSave" layoutX="420.0" layoutY="882.0" mnemonicParsing="false" onAction="#ButtonSaveOnAction" text="Save" />
+      <Button fx:id="ButtonCancel" layoutX="514.0" layoutY="882.0" mnemonicParsing="false" onAction="#ButtonCancelOnAction" text="Cancel" />
+      <TextField fx:id="ButtonCustId" layoutX="187.0" layoutY="161.0" onAction="#ButtonCustIdOnAction" promptText="Enter ID Number" />
+      <Text layoutX="76.0" layoutY="724.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User ID">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtUserID" layoutX="187.0" layoutY="707.0" onAction="#TxtUserIDOnAction" />
+   </children>
+</Pane>

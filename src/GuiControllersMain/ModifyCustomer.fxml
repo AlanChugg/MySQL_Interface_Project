@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="640.0" prefWidth="456.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiControllersMain.ModifyCustomerController">
+    <children>
+        <Text layoutX="97.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modify Customer">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Text>
+        <Text layoutX="39.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer ID">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Text>
+        <Text layoutX="85.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Text>
+        <Text layoutX="73.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Text>
+        <Text layoutX="87.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Postal">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Text>
+        <Text layoutX="86.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Text>
+        <Text layoutX="78.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Country">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Text>
+        <Text layoutX="12.0" layoutY="530.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1st Level Division">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Text>
+        <Button fx:id="ButtonSave" layoutX="331.0" layoutY="598.0" mnemonicParsing="false" onAction="#ButtonSaveOnAction" text="Save" />
+        <Button fx:id="ButtonCancel" layoutX="392.0" layoutY="598.0" mnemonicParsing="false" onAction="#ButtonCancelOnAction" text="Cancel" />
+        <TextField fx:id="TxtName" layoutX="166.0" layoutY="161.0" onAction="#TxtNameOnAction" />
+        <TextField fx:id="TxtAddress" layoutX="166.0" layoutY="231.0" onAction="#TxtAddressOnAction" />
+        <TextField fx:id="TxtPostal" layoutX="166.0" layoutY="301.0" onAction="#TxtPostalOnAction" />
+        <TextField fx:id="TxtPhone01" layoutX="166.0" layoutY="371.0" onAction="#TxtPhone01OnAction" prefHeight="25.0" prefWidth="150.0" />
+        <ComboBox fx:id="ComboCountry" layoutX="166.0" layoutY="441.0" onAction="#ComboCountryOnAction" prefWidth="150.0" promptText="Select A Country" />
+        <ComboBox fx:id="ComboDivision" layoutX="166.0" layoutY="511.0" onAction="#ComboDivisionOnAction" prefWidth="150.0" promptText="Select Division" />
+      <Label fx:id="LabelCustomerId" layoutX="227.0" layoutY="95.0" text="0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

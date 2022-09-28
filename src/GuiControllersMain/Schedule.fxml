@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiControllersMain.ScheduleController">
+   <children>
+      <TableView fx:id="TableAppointment" layoutX="162.0" layoutY="192.0" onSort="#TableAppointmentOnAction" prefHeight="428.0" prefWidth="1017.0">
+        <columns>
+          <TableColumn fx:id="ColumnApptID" prefWidth="52.0" text="Appt ID" />
+          <TableColumn fx:id="ColumnTitle" prefWidth="100.0" text="Title" />
+            <TableColumn fx:id="ColumnType" minWidth="0.0" prefWidth="87.0" text="Type" />
+            <TableColumn fx:id="ColumnCustomerID" prefWidth="77.0" text="Customer ID" />
+            <TableColumn fx:id="ColumnContact" prefWidth="118.0" text="Contact" />
+            <TableColumn fx:id="ColumnLocation" prefWidth="125.0" text="Location" />
+            <TableColumn fx:id="ColumnStartDate" prefWidth="116.0" text="Start Date" />
+            <TableColumn fx:id="ColumnEndDate" prefWidth="146.0" text="End Date" />
+            <TableColumn fx:id="ColumnDescription" prefWidth="106.0" text="Description" />
+            <TableColumn fx:id="ColumnUserID" prefWidth="89.0" text="User ID" />
+        </columns>
+      </TableView>
+      <Text layoutX="278.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment Manager">
+         <font>
+            <Font size="64.0" />
+         </font>
+      </Text>
+      <Text layoutX="183.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Display Appointments:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <RadioButton fx:id="RadioAllAppt" layoutX="396.0" layoutY="158.0" mnemonicParsing="false" onAction="#RadioAllApptOnAction" selected="true" text="All">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="Appointment" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="RadioWeekAppt" layoutX="505.0" layoutY="158.0" mnemonicParsing="false" onAction="#RadioWeekApptOnAction" text="By Week of:" toggleGroup="$Appointment">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="RadioMonthAppt" layoutX="795.0" layoutY="158.0" mnemonicParsing="false" onAction="#RadioMonthApptOnAction" text="By Month" toggleGroup="$Appointment">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </RadioButton>
+      <Button fx:id="ButtonApplyFilter" layoutX="1087.0" layoutY="153.0" mnemonicParsing="false" onAction="#ButtonApplyFilterOnAction" text="Apply Filter">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="ButtonManageCustomer" layoutX="17.0" layoutY="586.0" mnemonicParsing="false" onAction="#ButtonManageCustomerOnAction" prefHeight="85.0" prefWidth="136.0" text="Manage &#10;Customers" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="ButtonExit" layoutX="1131.0" layoutY="646.0" mnemonicParsing="false" onAction="#ButtonExitOnAction" text="Exit">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="ButtonGenerateReport" layoutX="568.0" layoutY="646.0" mnemonicParsing="false" onAction="#ButtonGenerateReportOnAction" text="Generate Report">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="ButtonAddAppointment" layoutX="20.0" layoutY="227.0" mnemonicParsing="false" onAction="#ButtonAddAppointmentOnAction" text="Add&#10;Appointment&#10;" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="ButtonUpdateAppointment" layoutX="20.0" layoutY="336.0" mnemonicParsing="false" onAction="#ButtonUpdateAppointmentOnAction" text="Update&#10;Appointment&#10;" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="ButtonDeleteAppointment" layoutX="19.0" layoutY="446.0" mnemonicParsing="false" onAction="#ButtonDeleteAppointmentOnAction" text="Delete&#10;Appointment&#10;" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <DatePicker fx:id="DatePickByWeeK" layoutX="629.0" layoutY="158.0" onAction="#DatePickByWeeKOnAction" prefHeight="25.0" prefWidth="136.0" promptText="Pick A Day" />
+      <ComboBox fx:id="ComboByMonth" layoutX="906.0" layoutY="158.0" onAction="#ComboByMonthOnAction" prefHeight="25.0" prefWidth="122.0" promptText="Pick A Month" />
+   </children>
+</Pane>
